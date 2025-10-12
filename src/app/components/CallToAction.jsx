@@ -54,7 +54,12 @@ export default function CTASection() {
             </p>
 
             {/* CTA Button */}
-            <motion.button className="group relative overflow-hidden bg-gradient-to-r from-white to-gray-300 text-[#030C16] font-semibold py-3 px-6 md:py-4 md:px-8 rounded-full text-base md:text-lg transition-all duration-300 shadow-lg border-2 border-transparent hover:border-white/40 w-full max-w-xs md:w-auto">
+            <motion.a 
+              href="https://forms.gle/FK2KKro2JMqCw9Hv8"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative overflow-hidden bg-gradient-to-r from-white to-gray-300 text-[#030C16] font-semibold py-3 px-6 md:py-4 md:px-8 rounded-full text-base md:text-lg transition-all duration-300 shadow-lg border-2 border-transparent hover:border-white/40 w-full max-w-xs md:w-auto inline-flex items-center justify-center"
+            >
               <span className="flex items-center justify-center gap-2 relative z-10">
                 Get Started Now
                 <motion.span
@@ -67,7 +72,7 @@ export default function CTASection() {
 
               {/* Shine effect */}
               <div className="absolute inset-0 rounded-full bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out" />
-            </motion.button>
+            </motion.a>
           </motion.div>
         </div>
 

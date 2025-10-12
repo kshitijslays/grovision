@@ -47,13 +47,18 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <button className="group relative w-full overflow-hidden rounded-full bg-gradient-to-r from-[#00dcf4] to-[#00a8cc] px-8 py-3.5 text-sm font-medium text-white shadow-md shadow-[#00dcf4]/10 transition-all duration-300 hover:shadow-lg hover:shadow-[#00dcf4]/20 sm:w-auto md:text-base">
+            <a 
+              href="https://forms.gle/FK2KKro2JMqCw9Hv8" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="group relative w-full overflow-hidden rounded-full bg-gradient-to-r from-[#00dcf4] to-[#00a8cc] px-8 py-3.5 text-sm font-medium text-white shadow-md shadow-[#00dcf4]/10 transition-all duration-300 hover:shadow-lg hover:shadow-[#00dcf4]/20 sm:w-auto md:text-base"
+            >
               <span className="relative z-10 flex items-center justify-center gap-2">
                 Get Started
                 <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-[#00a8cc] to-[#00dcf4] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-            </button>
+            </a>
 
             <button className="group relative w-full overflow-hidden rounded-full border border-white/10 bg-white/5 px-8 py-3.5 text-sm font-light text-white backdrop-blur-sm transition-all duration-300 hover:border-[#00dcf4]/50 hover:bg-white/10 sm:w-auto md:text-base">
               <span className="flex items-center justify-center gap-2">
