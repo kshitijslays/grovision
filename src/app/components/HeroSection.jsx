@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Sparkles, ArrowRight, Zap } from 'lucide-react';
 
-export default function Hero() {
+function App() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -10,6 +10,11 @@ export default function Hero() {
 
   return (
     <section className="relative w-full min-h-screen overflow-hidden bg-[#030C16] text-white">
+      {/* Lamp Effect */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full pointer-events-none">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#00dcf4] rounded-full opacity-20 blur-[120px]" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[400px] h-[400px] bg-[#00a8cc] rounded-full opacity-30 blur-[100px]" />
+      </div>
 
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:64px_64px]" />
 
@@ -21,11 +26,11 @@ export default function Hero() {
         >
           <div className="inline-flex items-center gap-2 mb-6 rounded-full border border-[#00dcf4]/30 bg-[#00dcf4]/5 px-4 py-2 text-xs font-light text-[#00dcf4] backdrop-blur-sm">
             <Sparkles className="w-3 h-3" />
-            <span className="tracking-wider">GROVISION</span>
+            <span className="tracking-wider">GROVISION X CONTENT CRAFTERS</span>
           </div>
 
           <h1 className="mx-auto mb-6 text-4xl font-light leading-tight tracking-tight md:text-5xl lg:text-4xl xl:text-5xl">
-            Where Creativity Meets  Technology <br /> to{' '}
+            Where Creativity Meets Technology <br /> to{' '}
             <span className="relative inline-block">
               <span className="relative z-10 bg-gradient-to-r from-[#00dcf4] to-[#00a8cc] bg-clip-text text-transparent">
                 Grow
@@ -47,9 +52,9 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <a 
-              href="https://forms.gle/FK2KKro2JMqCw9Hv8" 
-              target="_blank" 
+            <a
+              href="https://forms.gle/FK2KKro2JMqCw9Hv8"
+              target="_blank"
               rel="noopener noreferrer"
               className="group relative w-full overflow-hidden rounded-full bg-gradient-to-r from-[#00dcf4] to-[#00a8cc] px-8 py-3.5 text-sm font-medium text-white shadow-md shadow-[#00dcf4]/10 transition-all duration-300 hover:shadow-lg hover:shadow-[#00dcf4]/20 sm:w-auto md:text-base"
             >
@@ -90,8 +95,8 @@ export default function Hero() {
           </div>
         </div>
       </div>
-
-      
     </section>
   );
 }
+
+export default App;
