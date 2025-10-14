@@ -7,10 +7,10 @@ import { motion } from "framer-motion";
 const testimonials = [
   {
     id: 1,
-    name: "Sarah Chen",
-    role: "Product Designer",
-    company: "TechCorp",
-    content: "Grovison has completely transformed how our team collaborates. The intuitive interface and powerful features make it indispensable for our daily workflow.",
+    name: "Shubham Sharma",
+    role: "Founder",
+    company: "Kaushics",
+    content:"Feeling grateful for my amazing social media team Content Crafters! Harsh, your video editing brings our stories to life with so much energy. Rimjhim, your designs capture the heart and spirit of Kaushiics perfectly. I’m lucky to have such creative and dedicated people making our online presence shine!",
     rating: 5,
     image: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop"
   },

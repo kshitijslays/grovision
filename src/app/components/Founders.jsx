@@ -7,23 +7,23 @@ const FounderSection = () => {
   const founders = [
     {
       name: 'Harsh Aswal',
-      role: 'Co-Founder & CEO',
+      role: 'Founder, Content Crafters',
       image: 'https://1kga789wdc.ufs.sh/f/lJZn16SaUVX5Lybijn5V4dQjwtUe75ApxbP68hlkFNKnGZIq',
-      bio: 'Visionary leader with 10+ years in tech entrepreneurship. Passionate about bridging creativity with cutting-edge technology to drive business growth.',
+      bio: 'Founder of Content Crafters, leads with a vision to make creative storytelling and digital growth simple and effective for every brand. With an engineering background and a passion for innovation, he has guided Content Crafters in building impactful content, social media strategies, and digital campaigns that help businesses grow and connect in the modern digital world.',
       social: {
-        linkedin: '#',
+        linkedin: '#;',
         email: 'alex@grovision.com'
       }
     },
     {
       name: 'Hasnain Khan',
-      role: 'Co-Founder & CTO',
+      role: 'Founder, Grovision',
       image: 'https://1kga789wdc.ufs.sh/f/lJZn16SaUVX5YKmwnzkdqrAaPiXWyjJwRgVxh49pENQmO51K',
-      bio: 'Tech innovator and full-stack developer with expertise in scalable solutions. Believes in building technology that empowers creative expression.',
+      bio: 'Founder of Grovison Technologies, where he leads with a vision to make digital transformation simple and effective for every business. With an engineering background and a strong drive for innovation, he has guided Grovison in creating impactful websites, digital strategies, and automation solutions that empower brands to grow in the modern',
       social: {
-        linkedin: '#',
-        email: 'sarah@grovision.com',
-        github: '#'
+        linkedin: 'https://www.linkedin.com/in/hasnainwarsi',
+        email: 'hasnainwarsi2404@gmail.com',
+        // github: '#'
       }
     }
   ];

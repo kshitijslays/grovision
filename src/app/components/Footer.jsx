@@ -3,7 +3,7 @@
 export default function FooterGlow() {
   return (
     <footer 
-      className="relative z-10 mt-8 w-full overflow-hidden pt-16 pb-8"
+      className="relative z-10  w-full overflow-hidden pt-16 pb-8"
       style={{
         background: 'linear-gradient(135deg, #030C16 0%, #030C16 100%)',
       }}

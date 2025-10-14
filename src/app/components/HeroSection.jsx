@@ -45,7 +45,7 @@ function App() {
 
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:64px_64px] animate-[pulse_8s_ease-in-out_infinite]" />
 
-      {/* Cursor Grid Effect */}
+      {/* Cursor Grid Effect - Reduced opacity */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
@@ -53,7 +53,7 @@ function App() {
           WebkitMaskImage: `radial-gradient(circle 4cm at ${cursorPosition.x}px ${cursorPosition.y}px, black, transparent)`,
         }}
       >
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,220,244,0.3)_1px,transparent_1px),linear-gradient(90deg,rgba(0,220,244,0.3)_1px,transparent_1px)] bg-[size:32px_32px]" />
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,220,244,0.15)_1px,transparent_1px),linear-gradient(90deg,rgba(0,220,244,0.15)_1px,transparent_1px)] bg-[size:32px_32px]" />
       </div>
 
       <div className="relative z-10 pt-40 container mx-auto h-full min-h-screen flex flex-col justify-center items-center px-6 text-center py-20">

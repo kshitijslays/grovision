@@ -29,9 +29,9 @@ const Team = () => {
   useOutsideClick(ref, () => setActive(null));
 
   return (
-    <div className="flex items-center justify-center min-h-screen px-4">
+    <div className="flex items-center justify-center min-h-screen ">
       <section
-        className="relative w-full min-h-screen overflow-hidden rounded-2xl md:rounded-4xl bg-[#0a0613] font-light text-white antialiased py-8"
+        className="relative w-full min-h-screen overflow-hidden  bg-[#0a0613] font-light text-white antialiased py-8"
         style={{
           background: 'linear-gradient(135deg, #030C16 0%, #030C16 100%)',
         }}
@@ -217,26 +217,26 @@ export const CloseIcon = () => {
 
 const cards = [
   {
-    description: "Full Stack Developer",
+    description: "Social Media Manager",
     title: "Harsh Aswal",
     src: "https://1kga789wdc.ufs.sh/f/lJZn16SaUVX5Lybijn5V4dQjwtUe75ApxbP68hlkFNKnGZIq",
     ctaText: "Resume",
     ctaLink: "https://1kga789wdc.ufs.sh/f/lJZn16SaUVX5rDwTLYf8BWI64UPVzZcp0EidljyDOusNoxLG",
     content: () => {
       return (
-        <p>Alex is a passionate full-stack developer with 5+ years of experience in building scalable web applications. He specializes in React, Node.js, and cloud technologies. <br /> <br />When not coding, Alex enjoys contributing to open-source projects and mentoring junior developers in the community.</p>
+        <p>Harsh Aswal is the founder of Content Crafters, a creative agency specializing in ads, lead generation, social media, content creation, designing, posts, reels, and campaigns. A skilled content strategist and branding expert with strong editing and cinematography abilities, he combines creativity with strategy to deliver impactful digital results while pursuing a B.Tech in Mechanical Engineering</p>
       );
     },
   },
   {
-    description: "UI/UX Designer",
+    description: "Founder , Grovison Technologies",
     title: "Hasnain Khan",
     src: "https://1kga789wdc.ufs.sh/f/lJZn16SaUVX5YKmwnzkdqrAaPiXWyjJwRgVxh49pENQmO51K",
     ctaText: "Resume",
     ctaLink: "https://ui.aceternity.com/templates",
     content: () => {
       return (
-        <p>Sarah is a creative UI/UX designer with a keen eye for detail and user experience. She has worked with numerous startups and established companies to create intuitive digital experiences. <br /> <br />Her design philosophy centers around creating interfaces that are both beautiful and functional.</p>
+        <p>'Founder of Grovison Technologies, where he leads with a vision to make digital transformation simple and effective for every business. With an engineering background and a strong drive for innovation, he has guided Grovison in creating impactful websites, digital strategies, and automation solutions that empower brands to grow in the modern</p>
       );
     },
   },
@@ -248,7 +248,7 @@ const cards = [
     ctaLink: "https://ui.aceternity.com/templates",
     content: () => {
       return (
-        <p>Michael is an experienced project manager who ensures all projects are delivered on time and exceed client expectations. <br /> <br />With a background in both technical and business domains, he bridges the gap between client requirements and technical implementation.</p>
+        <p>Rimjhim Kumari is the Co-Founder and Graphic Designer at Content Crafters, bringing creativity and precision to every project. With experience in crafting 500+ unique designs, she specializes in creating visually striking graphics that enhance brand identity and engagement. Her strong sense of aesthetics and attention to detail make her an essential force behind the creative success of Content Crafters</p>
       );
     },
   },
@@ -261,6 +261,18 @@ const cards = [
     content: () => {
       return (
         <p>Web & App Developer | Turning ideas into fast, functional & visually stunning digital experiences. Skilled in crafting responsive websites and intuitive mobile apps that blend creativity with technology. Passionate about clean code, UI/UX, and continuous innovation. </p>
+      );
+    },
+  },
+  {
+    description: "Ads manager",
+    title: "Monty Paswan",
+    src: "https://1kga789wdc.ufs.sh/f/lJZn16SaUVX5AHpniA7E1VPDJoZRImslivCz2McKS3fug6T5",
+    ctaText: "Resume",
+    ctaLink: "https://1kga789wdc.ufs.sh/f/lJZn16SaUVX5rOiFOcf8BWI64UPVzZcp0EidljyDOusNoxLG",
+    content: () => {
+      return (
+        <p>Monty is a skilled backend developer specializing in database architecture, API development, and server optimization. With expertise in Node.js, Python, and cloud infrastructure, he builds robust and scalable systems that power modern applications. <br /> <br />When not coding, John enjoys exploring new technologies and contributing to developer communities.</p>
       );
     },
   },

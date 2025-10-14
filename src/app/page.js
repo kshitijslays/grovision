@@ -41,12 +41,13 @@ const Page = () => {
             <Team />
           </div>
           <CTASection />
+          <div id = "testimonials">
+          <Testimonials />
+          </div>
           <div id="faqs">
             <Faqs />
           </div>
-           <div id = "testimonials">
-          <Testimonials />
-          </div>
+           
           <Velocity />
          
           <FooterSection />

@@ -42,6 +42,7 @@ export const VelocityScroll = ({
     const [repetitions, setRepetitions] = useState(1);
     const containerRef = useRef(null);
     const textRef = useRef(null);
+    const [isHovered, setIsHovered] = useState(false);
 
     useEffect(() => {
       const calculateRepetitions = () => {
@@ -73,6 +74,11 @@ export const VelocityScroll = ({
 
       moveBy += directionFactor.current * moveBy * velocityFactor.get();
 
+      // Apply hover effect - reduce speed when hovered
+      if (isHovered) {
+        moveBy *= 0.3; // Reduce speed to 30% of normal when hovered
+      }
+
       baseX.set(baseX.get() + moveBy);
     });
 
@@ -80,6 +86,8 @@ export const VelocityScroll = ({
       <div
         className="w-full overflow-hidden whitespace-nowrap"
         ref={containerRef}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
       >
         <motion.div className={cn("inline-block", className)} style={{ x }}>
           {Array.from({ length: repetitions }).map((_, i) => (
