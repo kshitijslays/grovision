@@ -118,7 +118,7 @@ const Team = () => {
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 0 }}
-                      className="text-neutral-600 text-sm md:text-base h-40 md:h-fit flex flex-col items-start gap-4 overflow-auto dark:text-neutral-400 [mask:linear-gradient(to_bottom,white,white,transparent)] [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]">
+                      className="text-neutral-600 text-sm md:text-base h-40 md:h-fit flex flex-col items-start gap-4 overflow-auto dark:text-neutral-400 [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]">
                       {typeof active.content === "function"
                         ? active.content()
                         : active.content}
@@ -218,10 +218,10 @@ export const CloseIcon = () => {
 const cards = [
   {
     description: "Full Stack Developer",
-    title: "Alex Johnson",
-    src: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
+    title: "Harsh Aswal",
+    src: "https://1kga789wdc.ufs.sh/f/lJZn16SaUVX5Lybijn5V4dQjwtUe75ApxbP68hlkFNKnGZIq",
     ctaText: "Resume",
-    ctaLink: "https://ui.aceternity.com/templates",
+    ctaLink: "https://1kga789wdc.ufs.sh/f/lJZn16SaUVX5rDwTLYf8BWI64UPVzZcp0EidljyDOusNoxLG",
     content: () => {
       return (
         <p>Alex is a passionate full-stack developer with 5+ years of experience in building scalable web applications. He specializes in React, Node.js, and cloud technologies. <br /> <br />When not coding, Alex enjoys contributing to open-source projects and mentoring junior developers in the community.</p>
@@ -230,8 +230,8 @@ const cards = [
   },
   {
     description: "UI/UX Designer",
-    title: "Sarah Miller",
-    src: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face",
+    title: "Hasnain Khan",
+    src: "https://1kga789wdc.ufs.sh/f/lJZn16SaUVX5YKmwnzkdqrAaPiXWyjJwRgVxh49pENQmO51K",
     ctaText: "Resume",
     ctaLink: "https://ui.aceternity.com/templates",
     content: () => {
@@ -241,9 +241,9 @@ const cards = [
     },
   },
   {
-    description: "Project Manager",
-    title: "Michael Chen",
-    src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
+    description: "Graphic Designer",
+    title: "Rimjhim Kumari",
+    src: "https://1kga789wdc.ufs.sh/f/lJZn16SaUVX5MiHd5IWpkPgjheEISXdl7DYxNyuCsc5QtnmM",
     ctaText: "Resume",
     ctaLink: "https://ui.aceternity.com/templates",
     content: () => {
@@ -253,14 +253,14 @@ const cards = [
     },
   },
   {
-    description: "DevOps Engineer",
-    title: "Emily Rodriguez",
-    src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face",
+    description: "Web & App Developer",
+    title: "Kshitij Raj",
+    src: "https://1kga789wdc.ufs.sh/f/lJZn16SaUVX5hi3eQpNdx4bWp0UlI1ZKuzEFvVsLw7JfMokX",
     ctaText: "Resume",
     ctaLink: "https://ui.aceternity.com/templates",
     content: () => {
       return (
-        <p>Emily specializes in cloud infrastructure and DevOps practices, ensuring our applications are scalable, secure, and performant. <br /> <br />She is passionate about automation and continuous integration/delivery pipelines that streamline development workflows.</p>
+        <p>Web & App Developer | Turning ideas into fast, functional & visually stunning digital experiences. Skilled in crafting responsive websites and intuitive mobile apps that blend creativity with technology. Passionate about clean code, UI/UX, and continuous innovation. </p>
       );
     },
   },

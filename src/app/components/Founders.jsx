@@ -1,32 +1,29 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Linkedin, Mail, Github, Globe } from 'lucide-react';
+import { Linkedin, Mail, Github } from 'lucide-react';
 
 const FounderSection = () => {
   const founders = [
     {
-      name: 'Alex Chen',
+      name: 'Harsh Aswal',
       role: 'Co-Founder & CEO',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face',
+      image: 'https://1kga789wdc.ufs.sh/f/lJZn16SaUVX5Lybijn5V4dQjwtUe75ApxbP68hlkFNKnGZIq',
       bio: 'Visionary leader with 10+ years in tech entrepreneurship. Passionate about bridging creativity with cutting-edge technology to drive business growth.',
       social: {
         linkedin: '#',
-        email: 'alex@grovision.com',
-        github: '#',
-        website: '#'
+        email: 'alex@grovision.com'
       }
     },
     {
-      name: 'Sarah Martinez',
+      name: 'Hasnain Khan',
       role: 'Co-Founder & CTO',
-      image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face',
+      image: 'https://1kga789wdc.ufs.sh/f/lJZn16SaUVX5YKmwnzkdqrAaPiXWyjJwRgVxh49pENQmO51K',
       bio: 'Tech innovator and full-stack developer with expertise in scalable solutions. Believes in building technology that empowers creative expression.',
       social: {
         linkedin: '#',
         email: 'sarah@grovision.com',
-        github: '#',
-        website: '#'
+        github: '#'
       }
     }
   ];
@@ -67,13 +64,9 @@ const FounderSection = () => {
   return (
     <section 
       className="relative w-full py-20 overflow-hidden"
-      
     >
-      {/* Unified background gradients */}
-      <div
-        className="absolute inset-0 bg-[#030C16]"
-        
-      />
+      {/* Background */}
+      <div className="absolute inset-0 bg-[#030C16]" />
 
       {/* Abstract background elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -174,8 +167,7 @@ const FounderSection = () => {
                     const Icon = {
                       linkedin: Linkedin,
                       email: Mail,
-                      github: Github,
-                      website: Globe
+                      github: Github
                     }[platform];
                     
                     return (
@@ -183,6 +175,7 @@ const FounderSection = () => {
                         key={platform}
                         href={platform === 'email' ? `mailto:${link}` : link}
                         className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:text-[#00dcf4] hover:border-[#00dcf4]/40 hover:bg-[#00dcf4]/10 transition-all duration-300"
+                        aria-label={platform}
                       >
                         <Icon className="w-4 h-4" />
                       </a>
@@ -196,9 +189,6 @@ const FounderSection = () => {
             </motion.div>
           ))}
         </motion.div>
-
-        {/* Founders Description */}
-       
       </div>
     </section>
   );

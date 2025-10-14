@@ -63,11 +63,11 @@ export default function FooterGlow() {
                 </svg>
               </span>
               <span className="bg-gradient-to-br from-[#00DCF4] to-[#008EA4] bg-clip-text text-xl font-semibold tracking-tight text-transparent">
-                Grovision
+                Grovision X Content Crafters
               </span>
             </a>
             <p className="text-white/60 mb-6 max-w-xs text-center text-sm md:text-left">
-              Grovision provides a set of reusable components and utilities to
+              Grovision X Content Crafters provides a set of reusable components and utilities to
               help you create beautiful and responsive user interfaces quickly and
               efficiently.
             </p>
@@ -186,7 +186,7 @@ export default function FooterGlow() {
           </nav>
         </div>
         <div className="text-white/60 relative z-10 mt-10 text-center text-xs">
-          <span>&copy; 2025 Grovision. All rights reserved.</span>
+          <span>&copy; 2025 Grovision X Content Crafters. All rights reserved.</span>
         </div>
       </div>
     </footer>

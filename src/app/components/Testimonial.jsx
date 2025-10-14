@@ -1,202 +1,224 @@
-'use client';
+"use client";
 
-// import type React from 'react';
-import { cn } from './lib/utils';
-import {
-  Home,
-  MapPin,
-  Compass,
-  Building,
-  Heart,
-  HomeIcon,
-  Camera,
-} from 'lucide-react';
-import {
-  Card,
-  CardHeader,
-  CardContent,
-  CardFooter,
-} from '@/components/ui/card';
-import { motion } from 'framer-motion';
+import { Star } from "lucide-react";
+import { Card, CardContent } from "./ui/card";
+import { motion } from "framer-motion";
 
-interface BentoItem {
-  title: string;
-  description: string;
-  icon: React.ReactNode;
-  status?: string;
-  tags?: string[];
-  meta?: string;
-  cta?: string;
-  colSpan?: number;
-  hasPersistentHover?: boolean;
-}
-
-interface BentoGridProps {
-  items: BentoItem[];
-}
-
-const itemsSample: BentoItem[] = [
+const testimonials = [
   {
-    title: 'Component Library',
-    meta: '100+ components',
-    description:
-      'Explore our extensive collection of ready-to-use UI components built with Next.js and Tailwind CSS. Perfect for quickly building beautiful, responsive websites.',
-    icon: <Home className="text-primary h-4 w-4" />,
-    status: 'Popular',
-    tags: ['UI', 'Components', 'Tailwind'],
-    colSpan: 2,
-    hasPersistentHover: true,
+    id: 1,
+    name: "Sarah Chen",
+    role: "Product Designer",
+    company: "TechCorp",
+    content: "Grovison has completely transformed how our team collaborates. The intuitive interface and powerful features make it indispensable for our daily workflow.",
+    rating: 5,
+    image: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop"
   },
   {
-    title: 'Responsive Design',
-    meta: 'All devices',
-    description:
-      'Every component is fully responsive and works beautifully on all screen sizes, from mobile to desktop.',
-    icon: <Building className="text-primary h-4 w-4" />,
-    status: 'Essential',
-    tags: ['Mobile', 'Desktop'],
+    id: 2,
+    name: "Marcus Rodriguez",
+    role: "Engineering Lead",
+    company: "StartupXYZ",
+    content: "I've tried countless tools, but Grovison stands out. The attention to detail and seamless experience keeps us coming back every day.",
+    rating: 5,
+    image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop"
   },
   {
-    title: 'Theme Support',
-    description:
-      'All components support both light and dark modes out of the box, with seamless transitions.',
-    icon: <MapPin className="text-primary h-4 w-4" />,
-    status: 'New',
+    id: 3,
+    name: "Emily Watson",
+    role: "Marketing Director",
+    company: "GrowthCo",
+    content: "The ROI we've seen since implementing Grovison has been remarkable. Our productivity increased by 40% in the first month alone.",
+    rating: 5,
+    image: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop"
   },
   {
-    title: 'Performance Optimized',
-    description:
-      'Built with performance in mind, ensuring fast load times and smooth interactions.',
-    icon: <HomeIcon className="text-primary h-4 w-4" />,
-    meta: 'Lighthouse 100',
-    tags: ['Speed', 'Optimization'],
+    id: 4,
+    name: "David Kim",
+    role: "Founder & CEO",
+    company: "InnovateLabs",
+    content: "Game-changer for our business. The Grovison team is incredibly responsive and the platform evolves with our needs.",
+    rating: 5,
+    image: "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop"
   },
   {
-    title: 'Accessibility',
-    description:
-      'All components follow WCAG guidelines and are fully accessible to all users.',
-    icon: <Heart className="text-primary h-4 w-4" />,
-    meta: 'WCAG 2.1 AA',
-    tags: ['A11y', 'Inclusive'],
+    id: 5,
+    name: "Jessica Park",
+    role: "Operations Manager",
+    company: "ScaleUp Inc",
+    content: "We've streamlined our entire operation thanks to Grovison. What used to take hours now takes minutes.",
+    rating: 5,
+    image: "https://images.pexels.com/photos/3764119/pexels-photo-3764119.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop"
   },
   {
-    title: 'Developer Experience',
-    meta: 'TypeScript',
-    description:
-      'Clean, well-documented code with TypeScript support for a seamless development experience.',
-    icon: <Compass className="text-primary h-4 w-4" />,
-    status: 'Featured',
-    tags: ['DX', 'TypeScript'],
-  },
-  {
-    title: 'Open Source',
-    meta: 'MIT License',
-    description:
-      'MVPBlocks is completely free and open-source. Use it for personal and commercial projects without any restrictions or attribution requirements.',
-    icon: <Camera className="text-primary h-4 w-4" />,
-    status: 'Free',
-    tags: ['Open Source', 'MIT'],
-    colSpan: 2,
-  },
+    id: 6,
+    name: "Alex Thompson",
+    role: "Creative Director",
+    company: "DesignStudio",
+    content: "Beautiful, functional, and reliable. It's rare to find a service that excels in all three areas. Highly recommend Grovison!",
+    rating: 5,
+    image: "https://images.pexels.com/photos/1516680/pexels-photo-1516680.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop"
+  }
 ];
 
-export default function BentoGrid({ items = itemsSample }: BentoGridProps) {
+export default function Testimonials() {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut"
+      }
+    }
+  };
+
   return (
-    <section className="relative overflow-hidden py-12">
-      {/* Decorative elements */}
-      <div className="bg-primary/5 absolute top-20 -left-20 h-64 w-64 rounded-full blur-3xl" />
-      <div className="bg-primary/5 absolute -right-20 bottom-20 h-64 w-64 rounded-full blur-3xl" />
+    <section 
+      className="relative w-full py-20 overflow-hidden"
+      style={{
+        background: 'linear-gradient(135deg, #030C16 0%, #030C16 100%)',
+      }}
+    >
+      {/* Unified background gradients */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            'radial-gradient(circle at 70% 30%, rgba(0, 220, 244, 0.1) 0%, rgba(13, 10, 25, 0) 50%), radial-gradient(circle at 30% 70%, rgba(0, 220, 244, 0.08) 0%, rgba(13, 10, 25, 0) 40%)',
+        }}
+      />
 
-      <div className="relative mx-auto grid max-w-6xl grid-cols-1 gap-4 p-4 md:grid-cols-3">
-        {items.map((item, index) => (
-          <motion.a
-            href="#"
-            key={`${item.title}-${item.status || item.meta}`}
-            className={cn(
-              item.colSpan || 'col-span-1',
-              item.colSpan === 2 ? 'md:col-span-2' : '',
-            )}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: index * 0.1 }}
-          >
-            <Card
-              className={cn(
-                'group bg-card/40 relative h-full transition-all duration-300 hover:shadow-md',
-                'will-change-transform hover:-translate-y-1',
-                'border-border/60 overflow-hidden',
-                {
-                  '-translate-y-1 shadow-md': item.hasPersistentHover,
-                },
-              )}
+      {/* Abstract background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <motion.div
+          animate={{ 
+            y: [0, -20, 0],
+          }}
+          transition={{ 
+            duration: 8, 
+            repeat: Infinity, 
+            ease: "easeInOut" 
+          }}
+          className="absolute top-20 left-10 w-8 h-8 rounded-full bg-[#00dcf4]/20 blur-sm"
+        />
+        <motion.div
+          animate={{ 
+            y: [0, 15, 0],
+          }}
+          transition={{ 
+            duration: 6, 
+            repeat: Infinity, 
+            ease: "easeInOut",
+            delay: 1 
+          }}
+          className="absolute bottom-32 right-16 w-6 h-6 rounded-full bg-[#00dcf4]/15 blur-sm"
+        />
+      </div>
+
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <div className="inline-block mb-4">
+            <span className="border border-[#00dcf4] text-[#00dcf4] px-4 py-1 rounded-full text-sm font-medium tracking-wider">
+              Testimonials
+            </span>
+          </div>
+          
+          <h2 className="text-4xl md:text-5xl font-light text-white mb-4">
+            Loved by <span className="text-[#00dcf4]">Clients</span> Worldwide
+          </h2>
+          <p className="text-xl text-white/60 max-w-2xl mx-auto">
+            See what our clients have to say about their experience with Grovison
+          </p>
+        </motion.div>
+
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
+          {testimonials.map((testimonial) => (
+            <motion.div
+              key={testimonial.id}
+              variants={itemVariants}
+              whileHover={{ y: -5 }}
             >
-              <div
-                className={cn(
-                  'absolute inset-0',
-                  item.hasPersistentHover
-                    ? 'opacity-100'
-                    : 'opacity-0 group-hover:opacity-100',
-                  'transition-opacity duration-300',
-                )}
-              >
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.03)_1px,transparent_1px)] bg-[length:4px_4px] dark:bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.03)_1px,transparent_1px)]" />
-              </div>
-
-              <CardHeader className="relative space-y-0 p-4">
-                <div className="flex items-center justify-between">
-                  <div className="bg-primary/10 flex h-8 w-8 items-center justify-center rounded-lg">
-                    {item.icon}
-                  </div>
-                  <span className="bg-secondary text-secondary-foreground rounded-md px-2 py-1 text-xs font-medium">
-                    {item.status || 'Active'}
-                  </span>
-                </div>
-              </CardHeader>
-
-              <CardContent className="relative space-y-2 p-4 pt-0">
-                <h3 className="text-foreground text-[15px] font-medium tracking-tight">
-                  {item.title}
-                  {item.meta && (
-                    <span className="text-muted-foreground ml-2 text-xs font-normal">
-                      {item.meta}
-                    </span>
-                  )}
-                </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  {item.description}
-                </p>
-              </CardContent>
-
-              <CardFooter className="relative p-4">
-                <div className="flex w-full items-center justify-between">
-                  <div className="text-muted-foreground flex flex-wrap gap-2 text-xs">
-                    {item.tags?.map((tag) => (
-                      <span
-                        key={`${item.title}-${tag}`}
-                        className="bg-secondary/50 rounded-md px-2 py-1 backdrop-blur-xs transition-all duration-200"
-                      >
-                        #{tag}
-                      </span>
+              <Card className="bg-[#030C16]/50 backdrop-blur-sm border border-[#00dcf4]/20 hover:border-[#00dcf4]/40 hover:bg-[#030C16]/70 transition-all duration-300">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-1 mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star
+                        key={i}
+                        className="w-5 h-5 fill-[#00dcf4] text-[#00dcf4]"
+                      />
                     ))}
                   </div>
-                  <span className="text-primary text-xs font-medium opacity-0 transition-opacity group-hover:opacity-100">
-                    {item.cta || 'Explore →'}
-                  </span>
-                </div>
-              </CardFooter>
 
-              <div
-                className={cn(
-                  'via-primary/10 absolute inset-0 -z-10 rounded-xl bg-gradient-to-br from-transparent to-transparent p-px',
-                  item.hasPersistentHover
-                    ? 'opacity-100'
-                    : 'opacity-0 group-hover:opacity-100',
-                  'transition-opacity duration-300',
-                )}
-              />
-            </Card>
-          </motion.a>
-        ))}
+                  <p className="text-white/80 leading-relaxed mb-6 italic">
+                    "{testimonial.content}"
+                  </p>
+
+                  <div className="flex items-center gap-4">
+                    <img
+                      src={testimonial.image}
+                      alt={testimonial.name}
+                      className="w-12 h-12 rounded-full object-cover ring-2 ring-[#00dcf4]/30"
+                    />
+                    <div>
+                      <h4 className="font-semibold text-white">
+                        {testimonial.name}
+                      </h4>
+                      <p className="text-sm text-white/60">
+                        {testimonial.role} at {testimonial.company}
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="mt-16 text-center"
+        >
+          <div className="inline-flex items-center gap-4 bg-[#030C16]/50 backdrop-blur-sm px-6 py-4 rounded-full border border-[#00dcf4]/20">
+            <div className="flex -space-x-3">
+              {testimonials.slice(0, 4).map((testimonial) => (
+                <img
+                  key={testimonial.id}
+                  src={testimonial.image}
+                  alt={testimonial.name}
+                  className="w-10 h-10 rounded-full border-2 border-[#030C16] object-cover"
+                />
+              ))}
+            </div>
+            <p className="text-sm text-white/80 font-medium">
+              Join 1,000+ satisfied clients
+            </p>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

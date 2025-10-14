@@ -132,9 +132,12 @@ const Services = ()=> {
         }}
       />
       
-        
-      
       <div className="relative z-10 mx-auto max-w-6xl px-4">
+        {/* Heading */}
+        <h1 className="mx-auto mb-12 text-center text-3xl font-light text-white md:text-4xl lg:text-5xl xl:text-6xl">
+          Our <span className="text-[#00dcf4]">Services</span>
+        </h1>
+
         <motion.div
           className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-6"
           variants={containerVariants}
@@ -163,4 +166,4 @@ const Services = ()=> {
     </div>
   );
 }
-export default Services;            
+export default Services;
