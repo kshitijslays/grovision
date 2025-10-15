@@ -95,12 +95,12 @@ function App() {
               <div className="absolute inset-0 bg-gradient-to-r from-[#00a8cc] to-[#00dcf4] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
             </a>
 
-            <button className="group relative w-full overflow-hidden rounded-full border border-white/10 bg-white/5 px-8 py-3.5 text-sm font-light text-white backdrop-blur-sm transition-all duration-300 hover:border-[#00dcf4]/50 hover:bg-white/10 sm:w-auto md:text-base">
+            {/* <button className="group relative w-full overflow-hidden rounded-full border border-white/10 bg-white/5 px-8 py-3.5 text-sm font-light text-white backdrop-blur-sm transition-all duration-300 hover:border-[#00dcf4]/50 hover:bg-white/10 sm:w-auto md:text-base">
               <span className="flex items-center justify-center gap-2">
                 <Zap className="w-4 h-4" />
                 View Projects
               </span>
-            </button>
+            </button> */}
           </div>
 
           <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-3 max-w-3xl mx-auto">
